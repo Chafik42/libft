@@ -6,9 +6,10 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 18:37:42 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/07 18:41:46 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/08 23:59:41 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
@@ -20,25 +21,25 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	p;
-	unsigned int	temp;
+	size_t			i;
+	size_t			j;
+	size_t			p;
+	size_t			temp;
 
-	p = ft_strlen(str);
-	j = ft_strlen(dest);
+	p = ft_strlen(src);
+	j = ft_strlen(dst);
 	temp = j;
 	i = 0;
 	if (j > size)
 		return (j + size);
 	while (src[i] != '\0' && temp < size - 1)
 	{
-		dest[temp] = src[i];
+		dst[temp] = src[i];
 		temp++;
 		i++;
 	}
-	dest[temp] = '\0';
+	dst[temp] = '\0';
 	return (p + j);
 }

@@ -6,10 +6,10 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 22:18:07 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/08 22:29:25 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/08 23:18:41 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
@@ -23,9 +23,9 @@ int	ft_strlen(char *str)
 
 char	*ft_strdup(const char *s)
 {
-	int	i;
-	char *str;
-	char *dest;
+	int			i;
+	char		*str;
+	char		*dest;
 
 	i = 0;
 	str = (char *)s;

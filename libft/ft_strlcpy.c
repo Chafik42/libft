@@ -6,9 +6,10 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 18:32:44 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/07 18:35:17 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/09 00:00:51 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 char	ft_strlen(char *str)
 {
@@ -20,21 +21,21 @@ char	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (size == 0)
 		ft_strlen(src);
 	while (src[i] && i < size - 1)
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
 	while (i < size)
 	{
-		dest[i] = '\0';
+		dst[i] = '\0';
 		i++;
 	}
 	return (ft_strlen(src));

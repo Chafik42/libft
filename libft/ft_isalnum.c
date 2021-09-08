@@ -6,14 +6,14 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 00:05:08 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/07 00:07:21 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/08 23:23:57 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include  "libft.h"
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
-	if ((ft_isalpha(c) != 0) || (ft_isdigit != 0))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

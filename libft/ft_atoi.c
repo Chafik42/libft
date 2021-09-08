@@ -6,9 +6,10 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 21:46:17 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/08 22:16:56 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/08 23:27:44 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	check(char i)
 {
@@ -44,15 +45,4 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	return (nbr * sign);
-}
-
-#include <stdio.h>
-int	main(void)
-{
-	char str[] = "2147483647";
-	int	intatoi;
-
-	intatoi = ft_atoi(str);
-	printf("%d\n", intatoi);
-	return (0);
 }

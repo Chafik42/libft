@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 23:46:01 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/08 00:22:12 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/08 21:45:09 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	long unsigned int	i;
 	int					j;
 	int					p;
-
+	
 	i = 0;
 	if (little[0] == '\0' )
 		return ((char *)big);
@@ -31,18 +31,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		{
 			j++;
 			p++;
-			if (big[j] == '\0')
+			if (little[j] == '\0')
 				return ((char *)&big[i]);
 		}
 		i++;
 	}
-	return (NULL);
+	return ("\0");
 }
-
-int	main(void)
+/*int	main(int ac, char **av)
 {
-	char s1a[18] = "This is OK for now";
-	char s2a[2] = "OK";
-
-	printf("%s\n", ft_strnstr(s1a, s2a, 3));
-}
+	(void) ac;
+	if (ac == 3)
+		printf("%s\n", ft_strnstr(av[1], av[2], 16));
+	return (0);
+}*/

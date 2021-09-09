@@ -21,6 +21,7 @@ SRCS 		= srcs/ft_calloc.c \
 			  srcs/ft_strchr.c		\
 			  srcs/ft_strlen.c		\
 			  srcs/ft_tolower.c		\
+			  srcs/ft_split.c		\
 
 OBJS 		= ${SRCS:.c=.o}
 

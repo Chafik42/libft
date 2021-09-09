@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 23:35:16 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/09 00:06:17 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/09 14:34:45 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_isalnum(int c);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);

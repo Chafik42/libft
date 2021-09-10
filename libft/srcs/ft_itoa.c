@@ -6,16 +6,15 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 00:35:45 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/10 01:05:49 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/10 20:21:32 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	putnbstr(char *str, int n, int i)
+void	putnbstr(char *str, long n, int i)
 {
 	if (n == 0)
 	{
-		str = malloc(1);
 		str[0] = '0';
 		return ;
 	}
@@ -32,12 +31,10 @@ void	putnbstr(char *str, int n, int i)
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		nbr;
-	char	*str;
+	int			i;
+	long		nbr;
+	char		*str;
 
-	if (n == -2147483648)
-		return ("-2147483468");
 	i = 0;
 	nbr = n;
 	if (nbr < 0)
@@ -54,6 +51,6 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		str[0] = '-';
 	str[i] = '\0';
-	putnbstr(str, n, i);
+	putnbstr(str, (long)n, i);
 	return (str);
 }

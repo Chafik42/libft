@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 00:35:45 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/10 20:21:32 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/09/11 04:01:36 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,6 +16,7 @@ void	putnbstr(char *str, long n, int i)
 	if (n == 0)
 	{
 		str[0] = '0';
+		str[1] = '\0';
 		return ;
 	}
 	i--;
@@ -47,7 +48,7 @@ char	*ft_itoa(int n)
 		nbr = nbr / 10;
 		i++;
 	}
-	str = malloc(sizeof(char) * (i + 1));
+	str = malloc(sizeof(char) * (i + 1) + (n == 0));
 	if (n < 0)
 		str[0] = '-';
 	str[i] = '\0';

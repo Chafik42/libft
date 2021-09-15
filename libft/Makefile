@@ -1,4 +1,4 @@
-SRCS 		= srcs/ft_calloc.c \
+SRCS 		= srcs/ft_calloc.c 		\
 			  srcs/ft_isdigit.c		\
 			  srcs/ft_memcpy.c		\
 			  srcs/ft_strdup.c		\
@@ -33,7 +33,19 @@ SRCS 		= srcs/ft_calloc.c \
 			  srcs/ft_putendl_fd.c	\
 			  srcs/ft_putnbr_fd.c	\
 
+BONUS		= srcs/ft_lstnew.c		\
+			  srcs/ft_lstadd_front.c\
+			  srcs/ft_lstsize.c		\
+			  srcs/ft_lstlast.c		\
+			  srcs/ft_lstadd_back.c	\
+			  srcs/ft_lstdelone.c	\
+			  srcs/ft_lstclear.c	\
+			  srcs/ft_lstiter.c		\
+			  srcs/ft_lstmap.c		\
+
 OBJS 		= ${SRCS:.c=.o}
+
+OBJS_bonus	= ${BONUS:.c=.o}
 
 RM 			= rm -f
 
@@ -53,11 +65,14 @@ $(NAME): 	${OBJS}
 					ar -rcs $(NAME) ${OBJS}
 
 clean:
-					${RM} ${OBJS}
+					${RM} ${OBJS} ${OBJS_bonus}
 
 fclean:		clean
 					${RM} $(NAME)
 
 re:			fclean all
 
-.PHONY: all clean fclean re 
+bonus: 		${OBJS} ${OBJS_bonus}
+					ar -rcs $(NAME) ${OBJS} ${OBJS_bonus}
+					
+.PHONY: all clean fclean re bonus 

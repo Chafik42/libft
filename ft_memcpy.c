@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 16:21:19 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/08 23:17:05 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/10/14 01:06:17 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char		*dest1;
 	const unsigned char	*src1;
 
+	if (!src && !dest)
+		return (NULL);
 	src1 = src;
 	dest1 = dest;
 	i = 0;

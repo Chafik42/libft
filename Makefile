@@ -6,7 +6,7 @@
 #    By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/16 15:16:01 by cmarouf           #+#    #+#              #
-#    Updated: 2021/09/17 17:40:47 by cmarouf          ###   ########.fr        #
+#    Updated: 2021/10/14 05:36:23 by cmarouf          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 #
@@ -71,7 +71,6 @@ CC 			= gcc
 					${CC} -I includes ${CFLAGS} -c $< -o ${<:.c=.o}
 
 all:		$(NAME)
-
 
 $(NAME): 	${OBJS}
 					ar -rcs $(NAME) ${OBJS}

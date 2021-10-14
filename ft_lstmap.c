@@ -6,7 +6,7 @@
 /*   By: cmarouf <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 18:30:29 by cmarouf           #+#    #+#             */
-/*   Updated: 2021/09/16 15:08:40 by cmarouf          ###   ########.fr       */
+/*   Updated: 2021/10/14 04:59:04 by cmarouf          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void*(*f)(void *), void (*del)(void *))
 	t_list	*nlst;
 	t_list	*nelem;
 
-	if (!lst || !f || !del)
+	if (!lst)
 		return (NULL);
 	nlst = NULL;
 	while (lst)

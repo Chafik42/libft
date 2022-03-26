@@ -4,6 +4,6 @@ Im updating the lib when i need some new functions in it.
 
 Full subject :
 
-[fr.subject.pdf](https://github.com/Chafik42/libft/files/8355623/fr.subject.pdf)
+[en.subject (1).pdf](https://github.com/Chafik42/libft/files/8355626/en.subject.1.pdf)
 
 ![eqw2weqqe](https://user-images.githubusercontent.com/76008303/160243987-15e91489-40b0-4f41-88cb-85431753cc10.png)
